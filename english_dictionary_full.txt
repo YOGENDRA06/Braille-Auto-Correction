@@ -1,0 +1,10 @@
+dictionary
+program
+words
+auto
+correct
+braille
+example
+input
+keyboard
+system
