@@ -25,9 +25,20 @@ def convert_braille_to_text(braille_input):
 # -----------------------------
 # Suggest words using RapidFuzz
 # -----------------------------
-def suggest_word(decoded_word, word_list, max_suggestions=3, threshold=80):
-    results = process.extract(decoded_word, word_list, limit=max_suggestions, score_cutoff=threshold)
-    return [match for match, score, _ in results]
+def suggest_word(decoded_word, word_list, max_suggestions=1, threshold=60):
+    # results = process.extract(decoded_word, word_list, limit=max_suggestions, score_cutoff=threshold)
+    # return [match for match, score, _ in results]
+    # Step 1: Get all matches above the threshold
+    all_matches = process.extract(decoded_word, word_list, score_cutoff=threshold, limit=None)
+
+    # Step 2: Filter and sort by closeness in length
+    sorted_matches = sorted(
+        all_matches,
+        key=lambda x: (abs(len(x[0]) - len(decoded_word)), -x[1])  # (length difference, score descending)
+    )
+
+    # Step 3: Return the top 'max_suggestions'
+    return [match for match, score, _ in sorted_matches[:max_suggestions]]
 
 # -----------------------------
 # GUI Application

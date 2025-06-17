@@ -12,33 +12,32 @@ dot_to_key = {
 
 # QWERTY key combinations mapped to letters
 # Format: 'DW' means D (dot 1) + W (dot 2), i.e., dots [1,2] => letter B
-
 braille_char_map = {
-    'D': 'A',       # dot 1
-    'DW': 'B',      # dots 1,2
-    'DK': 'C',      # dots 1,4
-    'DKQ': 'D',     # dots 1,4,3
-    'DQ': 'E',
-    'DKW': 'F',
-    'DKWQ': 'G',
-    'DWQ': 'H',
-    'KW': 'I',
-    'KWQ': 'J',
-    'DO': 'K',
-    'DWO': 'L',
-    'DKO': 'M',
-    'DKQO': 'N',
+    'D': 'A',
+    'DW': 'B',
+    'DK': 'C',
+    'DKO': 'D',
+    'DO': 'E',
+    'DWK': 'F',
+    'DWKO': 'G',
+    'DWO': 'H',
+    'WK': 'I',
+    'WKO': 'J',
+    'DQ': 'K',
+    'DWQ': 'L',
+    'DQK': 'M',
+    'DQKO': 'N',
     'DQO': 'O',
-    'DKWO': 'P',
-    'DKWQO': 'Q',
+    'DWQK': 'P',
+    'DWQKO': 'Q',
     'DWQO': 'R',
-    'KWO': 'S',
-    'KWQO': 'T',
-    'DOP': 'U',
-    'DWOP': 'V',
-    'KWQP': 'W',
-    'DKOP': 'X',
-    'DKQOP': 'Y',
+    'WQK': 'S',
+    'WQKO': 'T',
+    'DQP': 'U',
+    'DWQP': 'V',
+    'WKOP': 'W',
+    'DQKP': 'X',
+    'DQKOP': 'Y',
     'DQOP': 'Z'
 }
 
